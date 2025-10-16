@@ -227,11 +227,17 @@ const CoinsTable = () => {
             setPage(value);
             window.scroll(0, 450);
           }}
+          siblingCount={1}
+          boundaryCount={1}
           sx={{
             padding: 2,
-            width: "100%",
             display: "flex",
             justifyContent: "center",
+            overflowX: "auto",
+            whiteSpace: "nowrap",
+            "& .MuiPagination-ul": {
+              flexWrap: "nowrap",
+            },
             "& .MuiPaginationItem-root": {
               color: "white",
               borderColor: "white",
